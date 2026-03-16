@@ -1,0 +1,12 @@
+.intro-nama{
+
+    opacity: 0;
+    margin-left: 100px;
+    transition: 1s ease-in-out;
+
+}.intro-nama.tampil{
+
+    margin-left: 0px;
+    opacity: 1;
+
+}
