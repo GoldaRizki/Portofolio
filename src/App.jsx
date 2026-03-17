@@ -6,6 +6,7 @@ import Section from './components/Section'
 import './App.css'
 
 import Introduction from './components/introduction/Introduction'
+import WhoAmI from './components/whoami/whoami'
 
 function App() {
   //const [count, setCount] = useState(0)
@@ -17,8 +18,8 @@ function App() {
         <Introduction />
       </Section>
 
-      <Section bgColor={"#146a7e"}> 
-
+      <Section bgColor={"#7AB2B2"}> 
+        <WhoAmI />
       </Section>
 
     </>

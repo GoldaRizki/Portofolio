@@ -1,12 +1,22 @@
-.intro-nama{
+.intro-nama-1, .intro-nama-2, .intro-nama-3{
 
     opacity: 0;
     margin-left: 100px;
-    transition: 1s ease-in-out;
 
-}.intro-nama.tampil{
+}
 
-    margin-left: 0px;
-    opacity: 1;
+.bg-intro-nama-3{
+    
+    width : 300px; 
+    height: 80px;
+    top: 50px;
+    left: 40px;     
+    background-color: rgb(181, 222, 243);
+    opacity: 0;
 
+
+}
+
+.pembungkus-intro{
+    padding-top: 3vw;
 }

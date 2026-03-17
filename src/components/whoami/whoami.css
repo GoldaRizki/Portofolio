@@ -1,0 +1,24 @@
+.siapa-saya{
+
+    font-size: 60px;
+    color: #EBF4F6;
+
+}
+
+
+.scroll-stick{
+    width: 9px;
+    height: 10px;
+    background-color: #EBF4F6;
+    border-radius: 6px;
+}
+
+
+.gambar-profesi{
+    width: 100px;
+    height: 500px;
+    margin-left: 40px;
+    margin-left: 40px;
+    font-size: 30px;
+    font-weight: bolder;
+}
