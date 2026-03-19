@@ -8,17 +8,32 @@
 
 .scroll-stick{
     width: 9px;
-    height: 10px;
-    background-color: #EBF4F6;
+    height: 60px;
+    background-color: #7AB2B2;
     border-radius: 6px;
 }
 
 
 .gambar-profesi{
-    width: 100px;
-    height: 500px;
+    width: 200px;
+    height: 200px;
+    padding: 20px 40px;
     margin-left: 40px;
     margin-left: 40px;
-    font-size: 30px;
+    margin-top: 50px;
+    font-size: 10px;
     font-weight: bolder;
+    transition: 0.5s;
+    border-radius: 6px;
+    background-color: #EBF4F6;
+    box-shadow: 10px 10px #b3deec;
+
+
+}
+
+.gambar-profesi:hover{
+
+    box-shadow: 30px 20px #b3deec;
+    cursor: pointer;
+    /*box-shadow: 2px 2px 30px #b3deec;*/
 }

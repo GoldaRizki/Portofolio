@@ -23,13 +23,14 @@ export default function WhoAmI(){
                 //scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
                 toggleActions: "play resume restart reverse"
                 }
+                
             }
         )
 
 
-        urutan.to(".siapa-saya", {fontSize: 72, duration: 0.3})
-              .to(".gambar-profesi", {height: 500, width: 300, duration: 1.5})
-              .to(".scroll-stick", {height: innerHeight, duration: 2})
+        urutan.to(".siapa-saya", {fontSize: 72, duration: 0.5})
+              .to(".gambar-profesi", {height: 400, width: 280, fontSize: '25px', duration: 0.2, ease: "elastic.out(1,0.3),"})
+              .to(".scroll-stick", {height: innerHeight, duration: 3})
         
 
 
@@ -52,13 +53,17 @@ return(
             <div className="row my-5">
 
                 <Baris>
-                    <Profesi gambar="/src/assets/svg/web-programming.svg" nama="PROGRAMMER"/>
-                    <Profesi gambar="/src/assets/svg/it-support.svg" nama={"IT\u00A0SUPPORT"}/>
+                    <Profesi gambar="/src/assets/svg/profesi/web-programming.svg" nama="PROGRAMMER"/>
+                    <Profesi gambar="/src/assets/svg/profesi/it-support.svg" nama={"IT\u00A0SUPPORT"}/>
                 </Baris>
                 <Baris>
-                    <Profesi gambar="/src/assets/svg/embedded-system-developer.svg" nama={"EMBEDDED SYSTEM DEVELOPER"}/>
-                    <Profesi gambar="/src/assets/svg/data-analyst.svg" nama={"DATA\u00A0ANALYST"}/>
+                    <Profesi gambar="/src/assets/svg/profesi/embedded-system-developer.svg" nama={"EMBEDDED SYSTEM DEVELOPER"}/>
+                    <Profesi gambar="/src/assets/svg/profesi/data-analyst.svg" nama={"DATA\u00A0ANALYST"}/>
                 </Baris>    
+                <Baris>
+                    <Profesi gambar="/src/assets/svg/profesi/photographer.svg" nama={"PHOTOGRAPHER"}/>
+                    <Profesi gambar="/src/assets/svg/profesi/educator.svg" nama={"EDUCATOR"}/>
+                </Baris>
 
             </div>
 

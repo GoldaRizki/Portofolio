@@ -1,0 +1,17 @@
+.toolsCard{
+box-shadow: 0px;
+opacity: 0;
+
+}
+
+.toolsCard:hover{
+
+box-shadow: 0px 0px 8px #979797;
+cursor: pointer;
+
+
+}
+
+.text-tools-card{
+    font-size: 12px;
+}
