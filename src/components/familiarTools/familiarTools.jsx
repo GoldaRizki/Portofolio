@@ -2,7 +2,10 @@ import ToolsCard from "./partials/toolsCard";
 import './familiarTools.css'
 import { useEffect } from 'react';
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function FamiliarTools(){
 
@@ -10,28 +13,38 @@ export default function FamiliarTools(){
     useEffect(()=>{
 
 
+        let config_timeline = {        
+                scrollTrigger: {    
+                trigger: '.judul-tools',
+                start: 'top 60%', // when the top of the trigger hits the top of the viewport
+                end: '', // end after scrolling 500px beyond the start
+                //markers: true,
+                toggleActions: "play reverse play reverse"
+            }
+        }
+
+        let tinggi = document.getElementById("familiarTools").getBoundingClientRect().height;
+
+        config_timeline.scrollTrigger.end = "+=" + tinggi;  
+
+        let tl = gsap.timeline(config_timeline);
+
+
+
         let elementTools = document.querySelectorAll(".toolsCard")
 
-        let tl = gsap.timeline({        
-            scrollTrigger: {
-            trigger: '.judul-tools',
-            start: 'top 30%', // when the top of the trigger hits the top of the viewport
-            end: '+=700 150px', // end after scrolling 500px beyond the start
-            markers: true,
-            toggleActions: "play reverse restart reverse"
-        }
-    });
-
-        tl.to(elementTools, {duration: 2, opacity: 1})
+        elementTools.forEach(element => {
+            tl.to(element, {duration: 0.2, opacity: 1})
+        });
         
 
     }, [])
 
     return(
-        <div className="container">
+        <div className="container py-3">
             <h1 className="text-center p-5 judul-tools">Tools That I'm Familiar With</h1>
 
-            <div className="container-fluid d-flex flex-wrap justify-content-center gap-2 p-3">
+            <div className="container-fluid d-flex flex-wrap justify-content-center gap-2 p-1">
 
                 <ToolsCard gambar="javascript" nama="Javascript"/>
                 <ToolsCard gambar="php" nama="PHP"/>
@@ -50,7 +63,11 @@ export default function FamiliarTools(){
                 <ToolsCard gambar="nodejs" nama="NodeJS"/>
                 <ToolsCard gambar="expressjs" nama="ExpressJs"/>
                 <ToolsCard gambar="laravel" nama="Laravel"/>
-                <ToolsCard gambar="react" nama="React"/>
+                <ToolsCard gambar="react" nama="ReactJs"/>
+
+                <ToolsCard gambar="git" nama="Git"/>
+                <ToolsCard gambar="github" nama="GitHub"/>
+
 
                 <ToolsCard gambar="mariadb" nama="MariaDB"/>
                 <ToolsCard gambar="sqlite" nama="Sqlite"/>

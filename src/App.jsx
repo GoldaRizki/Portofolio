@@ -7,7 +7,7 @@ import './App.css'
 
 import Introduction from './components/introduction/Introduction'
 import WhoAmI from './components/whoami/whoami'
-import FamiliarTools from './components/familiarTools/FamiliarTools'
+import FamiliarTools from './components/familiarTools/familiarTools'
 
 function App() {
   //const [count, setCount] = useState(0)
@@ -15,19 +15,19 @@ function App() {
   return (
     <>
 
-      <Section bgColor={"#EBF4F6"}> 
+      <Section id="introduction" bgColor="#EBF4F6"> 
         <Introduction />
       </Section>
 
-      <Section bgColor={"#09637E"}> 
+      <Section id="profesiSaya" bgColor="#FFD150"> 
         <WhoAmI />
       </Section>
 
-      <Section bgColor={"#EBF4F6"}>
+      <Section id="familiarTools" bgColor="#EBF4F6">
         <FamiliarTools />
       </Section>
 
-      <Section bgColor={"#f42b24"}>
+      <Section id="entah" bgColor="#091413">
 
       </Section>
 

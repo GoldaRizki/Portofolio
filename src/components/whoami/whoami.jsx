@@ -14,25 +14,33 @@ export default function WhoAmI(){
 
     useEffect(()=>{
 
-        let urutan = gsap.timeline(
-            {
+        let tinggi = document.getElementById("profesiSaya").getBoundingClientRect().height;
+
+        //console.log("tingginya adalah :" + tinggi)
+
+        let config_timeline = {   
                 scrollTrigger: {
                 trigger: '.siapa-saya',
-                start: 'top 50%', // when the top of the trigger hits the top of the viewport
-                end: '+=100', // end after scrolling 500px beyond the start
+                start: 'top 40%', // when the top of the trigger hits the top of the viewport
+                end: "", // end after scrolling 500px beyond the start
                 //scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-                toggleActions: "play resume restart reverse"
+                //markers: true,
+                toggleActions: "play reverse restart reverse"
+        
                 }
                 
             }
-        )
+
+        config_timeline.scrollTrigger.end = "+=" + tinggi 
+
+        let urutan = gsap.timeline(config_timeline)
 
 
-        urutan.to(".siapa-saya", {fontSize: 72, duration: 0.5})
-              .to(".gambar-profesi", {height: 400, width: 280, fontSize: '25px', duration: 0.2, ease: "elastic.out(1,0.3),"})
-              .to(".scroll-stick", {height: innerHeight, duration: 3})
+        urutan.to(".siapa-saya", {fontSize: 72, duration: 0.3})
+              .to(".gambar-profesi", {boxShadow:"10px 10px #000000" , duration: 0.5, ease: "elastic.out(1,0.3),"})
+              
         
-
+        gsap.to(".scroll-stick", {scrollTrigger: config_timeline.scrollTrigger, height: innerHeight, duration: 1})
 
     },[])
 
@@ -48,7 +56,7 @@ return(
 
         <div className="col-11">
 
-        <h1 className="siapa-saya text-center">WHO AM I?</h1>
+        <h1 className="siapa-saya text-center">WHO AM&nbsp;I?</h1>
 
             <div className="row my-5">
 
@@ -66,6 +74,9 @@ return(
                 </Baris>
 
             </div>
+
+            <span className='siapa-saya-end'></span>
+
 
         </div>
 

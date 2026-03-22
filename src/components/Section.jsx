@@ -1,8 +1,8 @@
-export default function Section({children, bgColor}){
+export default function Section({children, bgColor, id}){
 
 return(
 
-<div className="container-fluid min-vh-100" style={{ backgroundColor : `${bgColor}`, boxSizing: "border-box"}}>
+<div id={id} className="container-fluid min-vh-100" style={{ backgroundColor : `${bgColor}`, boxSizing: "border-box"}}>
     
     {children}
 

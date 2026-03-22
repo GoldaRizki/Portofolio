@@ -1,6 +1,7 @@
 .toolsCard{
 box-shadow: 0px;
 opacity: 0;
+transition: 0.1s;
 
 }
 
