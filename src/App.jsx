@@ -8,6 +8,7 @@ import './App.css'
 import Introduction from './components/introduction/Introduction'
 import WhoAmI from './components/whoami/whoami'
 import FamiliarTools from './components/familiarTools/familiarTools'
+import Experience from './components/experience/experience'
 
 function App() {
   //const [count, setCount] = useState(0)
@@ -27,8 +28,8 @@ function App() {
         <FamiliarTools />
       </Section>
 
-      <Section id="entah" bgColor="#091413">
-
+      <Section id="experience" bgColor="#091413">
+        <Experience />
       </Section>
 
     </>
