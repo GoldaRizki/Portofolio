@@ -48,16 +48,16 @@ export default function Pengalaman({file_gambar, pengalaman, lokasi, durasi, des
 
     let scrollTriggerConfig = {
         trigger: '.title-experience',
-        start: 'top 40%', // when the top of the trigger hits the top of the viewport
+        start: 'top 50%', // when the top of the trigger hits the top of the viewport
         end: "", // end after scrolling 500px beyond the start
         //scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
         //markers: true,
-        toggleActions: "restart restart restart restart"
+        toggleActions: "play restart resume restart"
       }
 
       let tinggi = document.getElementById("experience").getBoundingClientRect().height;
       scrollTriggerConfig.end = "+=" + tinggi;
-      console.log(tinggi)
+
       
     let tulisan = gsap.timeline({
       scrollTrigger: scrollTriggerConfig

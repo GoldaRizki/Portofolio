@@ -1,0 +1,41 @@
+.gambar-parallax-motto{
+
+width: 100%;
+height: 280%;
+object-fit:cover;
+transform:translateY(-600px);
+
+}   
+
+.wadahGambar{
+
+    height: 40vh;
+    overflow: hidden;
+
+}
+
+.kata-mutiara{
+
+    color: #072227;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: calc(.7em + 1.5vw);
+    font-weight: 500;
+
+}
+
+.judul-motto{
+
+    margin: 0;
+    padding: 1vw 2vw;
+    color: #072227;
+    width: 100%;
+    height: 20vh;
+    font-size: calc(5em + 4vw);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+
+}
+
+
+
+
