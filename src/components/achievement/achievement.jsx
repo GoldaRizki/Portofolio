@@ -3,7 +3,7 @@ import { useRef } from "react";
 import "./achievement.css"
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -40,7 +40,7 @@ export default function Achievement(){
             scrollTrigger: {
                 trigger: judul.current,
                 start: "top 60%",
-                end: "bottom 30%",
+                end: "bottom 40%",
                 scrub: true,
                 //markers: true
 
@@ -63,31 +63,36 @@ export default function Achievement(){
             transformOrigin: "top left",
             scrollTrigger: {
                 trigger: judul.current,
-                start: "top 60%",
+                start: "top 50%",
                 end: "bottom 30%",
-                scrub: 0.7,
+                scrub: 0.5,
+                onUpdate : () => ScrollTrigger.refresh(),
                 toggleActions: "play resume resume resume",
                 //markers: true
 
                 }
             });
+
 
         }else{
 
             gsap.to(kontainerVideo.current, {
-            flexBasis: "70%",
+            flexBasis: "80%",
             ease: "none",
             transformOrigin: "bottom center",
             scrollTrigger: {
                 trigger: judul.current,
-                start: "top 60%",
-                end: "bottom 30%",
-                scrub: 0.7,
+                start: "top 40%",
+                end: "bottom 20%",
+                scrub: 0.2,
+                onUpdate : () => ScrollTrigger.refresh(),
                 toggleActions: "play resume resume resume",
                 //markers: true
 
                 }
             });
+
+
 
             gsap.to(kontainerDeskripsi.current, {
                 flexBasis: "100%",

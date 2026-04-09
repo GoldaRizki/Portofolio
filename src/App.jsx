@@ -11,6 +11,8 @@ import FamiliarTools from './components/familiarTools/familiarTools'
 import Experience from './components/experience/experience'
 import LifeMotto from './components/lifeMotto/lifeMotto'
 import Achievement from './components/achievement/achievement'
+import Contacts from './components/contacts/contacts'
+
 
 function App() {
   //const [count, setCount] = useState(0)
@@ -41,6 +43,11 @@ function App() {
 
       <Section id="achievement" bgColor="#EBF4F6">
         <Achievement />
+      </Section>
+
+
+      <Section id="contacts" bgColor="#EBF4F6">
+        <Contacts />
       </Section>
 
 
