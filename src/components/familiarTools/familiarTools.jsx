@@ -1,8 +1,8 @@
 import ToolsCard from "./partials/toolsCard";
 import './familiarTools.css'
-import { useEffect } from 'react';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function FamiliarTools(){
 
 
-    useEffect(()=>{
+    useGSAP(()=>{
 
 
         let config_timeline = {        
@@ -27,21 +27,53 @@ export default function FamiliarTools(){
 
         config_timeline.scrollTrigger.end = "+=" + tinggi;  
 
-        let tl = gsap.timeline(config_timeline);
+    //    let tl = gsap.timeline(config_timeline);
 
 
 
         let elementTools = document.querySelectorAll(".toolsCard")
 
+
+        /*
         elementTools.forEach(element => {
             tl.to(element, {duration: 0.2, opacity: 1})
         });
+
+        
+*/
+
+        for(let i = 0; i < elementTools.length; i+=8){
+
+            let time_line = gsap.timeline(config_timeline);
+
+
+            if(elementTools.length - i != elementTools.length % 8 ){
+
+                for(let j = i; j < i + 8; j++){
+
+                    time_line.to(elementTools[j], {duration: 0.2, opacity: 1})
+
+                }
+
+            }else{
+
+                for(let j = i; j < i + (elementTools.length % 8); j++){
+
+                    time_line.to(elementTools[j], {duration: 0.2, opacity: 1})
+
+                }
+                
+            }
+
+            
+            
+        }
         
 
-    }, [])
+    })
 
     return(
-        <div className="container py-3">
+        <div className="container">
             <h1 className="text-center p-5 judul-tools">Tools That I'm Familiar With</h1>
 
             <div className="container-fluid d-flex flex-wrap justify-content-center gap-2 p-1">
@@ -86,7 +118,7 @@ export default function FamiliarTools(){
 
             </div>
 
-            <div className="container end-of-tools"></div>
+    
         </div> 
     
     );

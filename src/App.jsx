@@ -28,25 +28,23 @@ function App() {
         <WhoAmI />
       </Section>
 
-      <Section id="familiarTools" bgColor="#EBF4F6">
+      <Section id="familiarTools" bgColor="#F5F8FA" paddingTop="30vh" paddingBottom="40vh">
         <FamiliarTools />
       </Section>
 
-      <Section id="experience" bgColor="#072227">
+      <Section id="experience" bgColor="#F5F8FA" paddingTop="60vh" paddingBottom="30vh">
         <Experience />
       </Section>
 
-      <Section id="lifeMotto" bgColor="#EBF4F6" paddingTop="70vh" paddingBottom="30vh">
-        <LifeMotto />      
-      </Section>
-
-
-      <Section id="achievement" bgColor="#EBF4F6" paddingTop="50vh" paddingBottom="30vh">
+      <Section id="achievement" bgColor="#F5F8FA" paddingTop="50vh" paddingBottom="30vh">
         <Achievement />
       </Section>
 
+      <Section id="lifeMotto" bgColor="#F5F8FA" paddingTop="30vh" paddingBottom="30vh">
+        <LifeMotto />      
+      </Section>
 
-      <Section id="contacts" bgColor="#EBF4F6" paddingTop="30vh" paddingBottom="30vh">
+      <Section id="contacts" bgColor="#F5F8FA" paddingTop="30vh" paddingBottom="20vh">
         <Contacts />
       </Section>
 

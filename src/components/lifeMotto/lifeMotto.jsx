@@ -43,12 +43,14 @@ export default function LifeMotto(){
 
         gsap.to(judul.current, {
             scale: 0.8,
+            y: 0,
             ease: "none",
             transformOrigin: "bottom left",
             scrollTrigger: {
                 trigger: judul.current,
                 start: "top 60%",
                 end: "bottom 40%",
+                onUpdate: ScrollTrigger.refresh(),
                 scrub: true,
                 //markers: true
 
@@ -111,7 +113,7 @@ export default function LifeMotto(){
 
                 <div className="col-6">
                     <span className="kata-mutiara">
-                        Being Normal Will Take You from A&nbsp;to&nbsp;B. But Being Insane Will Take You Anywhere
+                        Being Normal Will Only Take You from A&nbsp;to&nbsp;B. But Being Insane Will Take You Anywhere
                     </span>
                 </div>
 

@@ -19,8 +19,8 @@ export default function Contacts(){
             ease: "none",
             scrollTrigger: {
                 trigger: judulKontak.current,
-                start: "top 80%",
-                end: "bottom 50%",
+                start: "top 60%",
+                end: "bottom 30%",
                 scrub: true,
                 //markers: true
             }

@@ -46,21 +46,20 @@ export default function Pengalaman({file_gambar, pengalaman, lokasi, durasi, des
   });
 
 
-    let scrollTriggerConfig = {
+  
+
+      
+
+      
+    let tulisan = gsap.timeline({
+      scrollTrigger: {
         trigger: '.title-experience',
         start: 'top 50%', // when the top of the trigger hits the top of the viewport
-        end: "", // end after scrolling 500px beyond the start
+        end: "bottom top", // end after scrolling 500px beyond the start
         //scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
         //markers: true,
         toggleActions: "play restart resume restart"
       }
-
-      let tinggi = document.getElementById("experience").getBoundingClientRect().height;
-      scrollTriggerConfig.end = "+=" + tinggi;
-
-      
-    let tulisan = gsap.timeline({
-      scrollTrigger: scrollTriggerConfig
     });
     
     tulisan.to(textRef.current, {
@@ -77,13 +76,13 @@ export default function Pengalaman({file_gambar, pengalaman, lokasi, durasi, des
 
 
     return(
-        <div className="container-md rounded p-5 box-pengalaman" style={{ backgroundColor : "#EBF4F6"}}>
+        <div className="container box-pengalaman" style={{ backgroundColor : "#ffffff"}}>
                 <div className="row w-100">
 
                     <div className="col-lg-4">
 
-                        <div style={{ width: "100%", height: "300px" }} className="d-flex align-items-center">
-                            <img src={"/src/assets/experience/" + file_gambar + ".png"} alt={lokasi} className="img-fluid" />
+                        <div style={{ width: "100%", height: "100%", padding: "20px" }} className="d-flex align-items-center">
+                            <img src={"/src/assets/experience/" + file_gambar + ".png"} alt={lokasi} className="logo_company" />
                         </div>
 
                     </div>

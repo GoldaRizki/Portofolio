@@ -15,8 +15,11 @@ cursor: pointer;
 
 .text-tools-card{
     font-size: 12px;
+    
 }
 
-.end-of-tools{
-    height: 10vh;
+.judul-tools{
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
+

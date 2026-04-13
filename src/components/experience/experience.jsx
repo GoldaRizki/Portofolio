@@ -1,13 +1,39 @@
 import Pengalaman from "./partials/pengalaman";
 import "./experience.css"
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { useRef } from "react";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Experience(){
+
+    let title = useRef();
+
+    useGSAP(()=>{
+
+        gsap.to(title.current, {
+            y: 0,
+            scale: 0.8,
+            scrollTrigger: {
+                trigger: '.title-experience',
+                start: 'top 50%', // when the top of the trigger hits the top of the viewport
+                end: "bottom top", // end after scrolling 500px beyond the start
+                scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+                onUpdate: () => ScrollTrigger.refresh(),
+                //markers: true,
+            }
+        })
+
+
+    });
 
 
     return(
         <div className="container-fluid py-5">
 
-            <h1 className="display-1 text-center title-experience mb-5" style={{ color: "#EBF4F6" }}>EXPERIENCE</h1>
+            <h1 ref={title} className="text-center title-experience mb-5">EXPERIENCE</h1>
 
             <Pengalaman
             file_gambar="goldastudio"

@@ -20,8 +20,8 @@ export default function Achievement(){
         let ubahTulisan = () => {
 
             let lebar = document.documentElement.clientWidth;
-            
-            if(lebar > 580){
+
+            if(lebar > 502){
                 judul.current.innerHTML = "ACHIEVEMENT"
             }else{
                 judul.current.innerHTML = "<span>ACHIEVE-</span><span>MENT</span>"
@@ -35,9 +35,9 @@ export default function Achievement(){
 
         let timeline = gsap.timeline({
             scrollTrigger: {
-                trigger: judul.current,
-                start: "top 40%",
-                end: "bottom 20%",
+                trigger: "#main-achievement-container",
+                start: "top bottom",
+                end: "10% 40%",
                 scrub: true,
                 onUpdate: () => ScrollTrigger.refresh(),
                 //markers: true
@@ -121,7 +121,7 @@ export default function Achievement(){
                 <div ref={kontainerDeskripsi} className="kontainer-deskripsi">
 
                     <h1>Silver Medalist</h1>
-                    <h3 className="text-muted">Kreativesia National Competition 2024</h3>
+                    <h3 className="text-secondary">Kreativesia National Competition 2024</h3>
 
                     <p style={{ fontSize: "17px" }}>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quos cupiditate maxime blanditiis libero necessitatibus, voluptas doloribus sequi odit quas eligendi, fugit mollitia unde nihil perspiciatis. Atque autem expedita placeat sed voluptates facilis omnis quas neque. Autem rem laboriosam in magnam dolores ipsam a quod voluptatibus nobis eveniet, quibusdam provident reiciendis incidunt vitae. Quasi, reprehenderit? Aut voluptatum accusantium dolore voluptatem ipsa repellat repellendus natus hic nesciunt quod sequi, vero est provident animi perferendis iure eos eligendi ducimus, eveniet doloremque expedita. Commodi atque dolorum officiis deserunt porro reiciendis quis ad, ex, nam eum sed vel libero mollitia vitae repellendus itaque. Debitis?
