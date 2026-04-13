@@ -36,17 +36,17 @@ function App() {
         <Experience />
       </Section>
 
-      <Section id="lifeMotto" bgColor="#EBF4F6">
+      <Section id="lifeMotto" bgColor="#EBF4F6" paddingTop="70vh" paddingBottom="30vh">
         <LifeMotto />      
       </Section>
 
 
-      <Section id="achievement" bgColor="#EBF4F6">
+      <Section id="achievement" bgColor="#EBF4F6" paddingTop="50vh" paddingBottom="30vh">
         <Achievement />
       </Section>
 
 
-      <Section id="contacts" bgColor="#EBF4F6">
+      <Section id="contacts" bgColor="#EBF4F6" paddingTop="30vh" paddingBottom="30vh">
         <Contacts />
       </Section>
 

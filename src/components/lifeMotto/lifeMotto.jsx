@@ -42,7 +42,7 @@ export default function LifeMotto(){
 
 
         gsap.to(judul.current, {
-            scale: 0.7,
+            scale: 0.8,
             ease: "none",
             transformOrigin: "bottom left",
             scrollTrigger: {
@@ -92,7 +92,7 @@ export default function LifeMotto(){
 
     return(
 
-        <div className="container-md" style={{ paddingTop: "70vh", paddingBottom: "20vh"}}>
+        <div className="container-md">
 
             <div ref={judul} className="judul-motto d-flex flex-column justify-content-end">
 

@@ -30,7 +30,7 @@ export default function Contacts(){
 
 
 return (
-    <div className="container kontainer-kontak">
+    <div className="container">
 
         <h1 ref={judulKontak} className="judul-kontak">CONTACTS</h1>
 

@@ -33,18 +33,22 @@ export default function Achievement(){
         window.addEventListener("load", ubahTulisan)
 
 
-
-        gsap.to(judul.current, {
-            y: 0,
-            ease: "none",
+        let timeline = gsap.timeline({
             scrollTrigger: {
                 trigger: judul.current,
-                start: "top 60%",
-                end: "bottom 40%",
+                start: "top 40%",
+                end: "bottom 20%",
                 scrub: true,
+                onUpdate: () => ScrollTrigger.refresh(),
                 //markers: true
 
             }
+        })
+
+
+        timeline.to(judul.current, {
+            y: 0,
+            ease: "none",
             });
 
         
@@ -57,39 +61,19 @@ export default function Achievement(){
 
         if(lebar >= 768){
 
-            gsap.to(kontainerVideo.current, {
+            timeline.to(kontainerVideo.current, {
             flexBasis: "30%",
             ease: "none",
             transformOrigin: "top left",
-            scrollTrigger: {
-                trigger: judul.current,
-                start: "top 50%",
-                end: "bottom 30%",
-                scrub: 0.5,
-                onUpdate : () => ScrollTrigger.refresh(),
-                toggleActions: "play resume resume resume",
-                //markers: true
-
-                }
             });
 
 
         }else{
 
-            gsap.to(kontainerVideo.current, {
+            timeline.to(kontainerVideo.current, {
             flexBasis: "80%",
             ease: "none",
             transformOrigin: "bottom center",
-            scrollTrigger: {
-                trigger: judul.current,
-                start: "top 40%",
-                end: "bottom 20%",
-                scrub: 0.2,
-                onUpdate : () => ScrollTrigger.refresh(),
-                toggleActions: "play resume resume resume",
-                //markers: true
-
-                }
             });
 
 

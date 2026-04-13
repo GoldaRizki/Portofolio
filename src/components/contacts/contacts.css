@@ -1,11 +1,3 @@
-.kontainer-kontak{
-
-    padding: 30vh 0px;
-
-    min-height: 100vh;
-
-}
-
 .judul-kontak{
 
     transform: translateY(-20vh);
@@ -15,7 +7,7 @@
     padding: 0;
     height: auto;
     color: #072227;
-    font-size: calc(3em + 5vw);
+    font-size: calc(3em + 3vw);
     font-family:Georgia, 'Times New Roman', Times, serif;
 
 }
