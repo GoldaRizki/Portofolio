@@ -24,7 +24,7 @@ function App() {
         <Introduction />
       </Section>
 
-      <Section id="profesiSaya" bgColor="#FFD150"> 
+      <Section id="profesiSaya" bgColor="#F5F8FA" paddingTop="60vh" paddingBottom="20vh"> 
         <WhoAmI />
       </Section>
 
