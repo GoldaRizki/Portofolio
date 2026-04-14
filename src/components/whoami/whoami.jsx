@@ -1,17 +1,14 @@
 import '/src/components/whoami/whoami.css'
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Baris from './partials/baris';
 import Profesi from './partials/profesi';
 import { useGSAP } from '@gsap/react';
-import { useRef } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 
 export default function WhoAmI(){
 
-    let container = useRef();
 
     useGSAP(()=>{
 
@@ -20,10 +17,10 @@ export default function WhoAmI(){
 
         let config_timeline = {   
                 scrollTrigger: {
-                trigger: container.current,
-                start: 'top 60%', // when the top of the trigger hits the top of the viewport
-                end: "30% top", // end after scrolling 500px beyond the start
-                scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+                trigger: '#profesiSaya',
+                start: '25% 60%', // when the top of the trigger hits the top of the viewport
+                end: "45% top", // end after scrolling 500px beyond the start
+                scrub: 0.5, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
                 //onUpdate: () => ScrollTrigger.refresh(),
                 //markers: true,
                 toggleActions: "play resume resume reverse"
@@ -35,8 +32,11 @@ export default function WhoAmI(){
     
 
         let urutan = gsap.timeline(config_timeline)
-
-
+            
+        urutan.to(".siapa-saya", {
+            translateY: 0
+        });
+        
         let container_profesi = document.querySelectorAll(".container-profesi");
         
         container_profesi.forEach(element => {
@@ -55,7 +55,7 @@ return(
 
 <div className="min-vh-100 container-fluid p-5">
 
-    <div ref={container} className="container-xxxl">
+    <div  className="container-xxxl">
 
         <h1 className="siapa-saya text-center">WHO AM&nbsp;I?</h1>
 

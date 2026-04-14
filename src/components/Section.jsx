@@ -2,7 +2,7 @@ export default function Section({children, bgColor, id, paddingTop = 0, paddingB
 
 return(
 
-<div id={id} className="min-vh-100" style={{ backgroundColor : `${bgColor}`, boxSizing: "border-box", paddingTop: `${paddingTop}`, paddingBottom: `${paddingBottom}`}}>
+<div id={id} className="min-vh-100" style={{ backgroundColor : `${bgColor}`, paddingTop: `${paddingTop}`, paddingBottom: `${paddingBottom}`}}>
     
     {children}
 

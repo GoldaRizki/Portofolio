@@ -2,7 +2,7 @@ export default function Kontak({nama, logo, link}){
  
  
  return (
-    <a href={link} className='text-decoration-none isi-kontak-font d-flex justify-content-center align-items-center'>
+    <a href={link} target="_blank" className='text-decoration-none isi-kontak-font d-flex justify-content-center align-items-center'>
                 <div className="row isi-kontak d-flex justify-content-center align-items-center">
 
                     <div className='col-3'>

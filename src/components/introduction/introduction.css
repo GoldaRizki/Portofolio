@@ -1,22 +1,79 @@
-.intro-nama-1, .intro-nama-2, .intro-nama-3{
+.intro-nama-1{
 
-    opacity: 0;
-    margin-left: 100px;
+    width: 100%;
+    font-size: calc(1.5em + 2vw);
+    padding-left: 2%;
+}
+.intro-nama-2{
+
+    width: 100%;
+    font-size: calc(2.4em + 3vw);
+    z-index: 1;
+    padding-left: 2%;
+
+}
+.container-nama{
+    padding: 20% 10%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+.container-nama-saya{
+    position: relative;
+    width: 70%;
+}
+
+.bg-intro-nama-2{
+    height: 100%;
+    width: 0%;
+    background-color: #F4CE14;
+    position: absolute;
+    top: 0;
+    left: 0; 
 
 }
 
-.bg-intro-nama-3{
-    
-    width : 300px; 
-    height: 80px;
-    top: 50px;
-    left: 40px;     
-    background-color: #b5def3;
-    opacity: 0;
-
-
+.container-fotoku{
+    width: 100%;
+    position: relative;
 }
 
-.pembungkus-intro{
-    padding-top: 3vw;
+.fotoku{
+    width: 80%;
+    height: auto;
+    z-index: 2;
+}
+
+
+.text-scroll-down{
+    font-size: calc(1em + 1vw);
+    margin-top: calc(5vw - 2vh + 10px);
+    text-decoration: underline;
+}
+
+.animasi-foto-1{
+    width: 50%;
+    height: 45%;
+    background-color: #BF092F;
+    position: absolute;
+    z-index: 1;
+    right: 10px;
+    bottom: 20px;
+    border-radius: 8px;
+    animation-name: animasi-background-foto-1;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+@media screen and (max-width: 400px) {
+    .container-nama{
+        padding: 20px 10px;
+    }
+}
+
+@keyframes animasi-background-foto-1 {
+  0%   {bottom: 20px;}
+  25%  {bottom: 30px;}
+  50%  {bottom: 40px;}
+  75%  {bottom: 30px;}
+  100% {bottom: 20px;}
 }

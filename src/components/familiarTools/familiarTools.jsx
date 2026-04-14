@@ -3,29 +3,29 @@ import './familiarTools.css'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
 
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function FamiliarTools(){
 
+    let kontainer = useRef();
 
     useGSAP(()=>{
 
 
         let config_timeline = {        
                 scrollTrigger: {    
-                trigger: '.judul-tools',
+                trigger: kontainer.current,
                 start: 'top 60%', // when the top of the trigger hits the top of the viewport
-                end: '', // end after scrolling 500px beyond the start
+                end: 'bottom top', // end after scrolling 500px beyond the start
                 //markers: true,
-                toggleActions: "play reverse play reverse"
+                toggleActions: "play resume play reverse"
             }
         }
 
-        let tinggi = document.getElementById("familiarTools").getBoundingClientRect().height;
-
-        config_timeline.scrollTrigger.end = "+=" + tinggi;  
+        
 
     //    let tl = gsap.timeline(config_timeline);
 
@@ -73,7 +73,7 @@ export default function FamiliarTools(){
     })
 
     return(
-        <div className="container">
+        <div ref={kontainer} className="container">
             <h1 className="text-center p-5 judul-tools">Tools That I'm Familiar With</h1>
 
             <div className="container-fluid d-flex flex-wrap justify-content-center gap-2 p-1">

@@ -15,25 +15,24 @@ import Contacts from './components/contacts/contacts'
 
 
 function App() {
-  //const [count, setCount] = useState(0)
 
   return (
     <>
 
-      <Section id="introduction" bgColor="#EBF4F6"> 
+      <Section id="introduction" bgColor="#F5F8FA"> 
         <Introduction />
       </Section>
 
-      <Section id="profesiSaya" bgColor="#F5F8FA" paddingTop="60vh" paddingBottom="20vh"> 
+      <Section id="profesiSaya" bgColor="#F5F8FA" paddingTop="80vh" paddingBottom="20vh"> 
         <WhoAmI />
-      </Section>
-
-      <Section id="familiarTools" bgColor="#F5F8FA" paddingTop="30vh" paddingBottom="40vh">
-        <FamiliarTools />
       </Section>
 
       <Section id="experience" bgColor="#F5F8FA" paddingTop="60vh" paddingBottom="30vh">
         <Experience />
+      </Section>
+      
+      <Section id="familiarTools" bgColor="#F5F8FA" paddingTop="30vh" paddingBottom="40vh">
+        <FamiliarTools />
       </Section>
 
       <Section id="achievement" bgColor="#F5F8FA" paddingTop="50vh" paddingBottom="30vh">

@@ -120,7 +120,7 @@ export default function Achievement(){
 
                 <div ref={kontainerDeskripsi} className="kontainer-deskripsi">
 
-                    <h1>Silver Medalist</h1>
+                    <h1>&#129352; Silver Medalist</h1>
                     <h3 className="text-secondary">Kreativesia National Competition 2024</h3>
 
                     <p style={{ fontSize: "17px" }}>
