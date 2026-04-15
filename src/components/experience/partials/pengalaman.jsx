@@ -82,7 +82,7 @@ export default function Pengalaman({file_gambar, pengalaman, lokasi, durasi, des
                     <div className="col-lg-4">
 
                         <div style={{ width: "100%", height: "100%", padding: "20px" }} className="d-flex align-items-center">
-                            <img src={"/src/assets/experience/" + file_gambar + ".png"} alt={lokasi} className="logo_company" />
+                            <img src={"/assets/experience/" + file_gambar + ".png"} alt={lokasi} className="logo_company" />
                         </div>
 
                     </div>

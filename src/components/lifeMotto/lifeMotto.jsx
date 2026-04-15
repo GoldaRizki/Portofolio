@@ -42,7 +42,6 @@ export default function LifeMotto(){
 
 
         gsap.to(judul.current, {
-            scale: 0.8,
             y: 0,
             ease: "none",
             transformOrigin: "bottom left",
@@ -50,8 +49,9 @@ export default function LifeMotto(){
                 trigger: judul.current,
                 start: "top 60%",
                 end: "bottom 40%",
-                onUpdate: ScrollTrigger.refresh(),
-                scrub: true,
+                onLeave: () => ScrollTrigger.refresh(),
+                onEnterBack: () => ScrollTrigger.refresh(),
+                scrub: 0.1,
                 //markers: true
 
             }
@@ -106,7 +106,7 @@ export default function LifeMotto(){
                 <div className="col-6">
 
                     <div ref={containerGambar1} className="wadahGambar">
-                        <img ref={gambarParallax1} className="gambar-parallax-motto" src="\src\assets\motto\gbr1.jpg" alt="dino ajur" />
+                        <img ref={gambarParallax1} className="gambar-parallax-motto" src="\assets\motto\gbr1.jpg" alt="dino ajur" />
 
                     </div>
                 </div>
@@ -130,7 +130,7 @@ export default function LifeMotto(){
                 <div className="col-6">
 
                         <div ref={containerGambar2} className="wadahGambar">
-                        <img ref={gambarParallax2} className="gambar-parallax-motto" src="\src\assets\motto\gbr2.webp" alt="dino ajur" />
+                        <img ref={gambarParallax2} className="gambar-parallax-motto" src="\assets\motto\gbr2.webp" alt="dino ajur" />
 
                     </div>
                 </div>

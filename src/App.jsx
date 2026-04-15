@@ -2,22 +2,32 @@
 //import reactLogo from './assets/react.svg'
 //import viteLogo from './assets/vite.svg'
 //import heroImg from './assets/hero.png'
-import Section from './components/Section'
-import './App.css'
 
-import Introduction from './components/introduction/Introduction'
-import WhoAmI from './components/whoami/whoami'
-import FamiliarTools from './components/familiarTools/familiarTools'
-import Experience from './components/experience/experience'
-import LifeMotto from './components/lifeMotto/lifeMotto'
-import Achievement from './components/achievement/achievement'
-import Contacts from './components/contacts/contacts'
+
+
+import { Suspense, lazy } from 'react'
+
+
+import LoadingPage from './components/loadingPage/loadingPage.jsx'
+
+lazy( () => import('./App.css')) 
+const Section = lazy( () => import('./components/Section'))
+
+const Introduction = lazy( () => import('./components/introduction/Introduction'))
+const WhoAmI = lazy( () => import('./components/whoami/whoami'))
+const FamiliarTools = lazy( () => import('./components/familiarTools/familiarTools'))
+const Experience = lazy( () => import('./components/experience/experience'))
+const LifeMotto = lazy( () => import('./components/lifeMotto/lifeMotto'))
+const Achievement = lazy( () => import('./components/achievement/achievement'))
+const Contacts = lazy( () => import('./components/contacts/contacts'))
 
 
 function App() {
 
+
+
   return (
-    <>
+    <Suspense fallback={<LoadingPage />}>
 
       <Section id="introduction" bgColor="#F5F8FA"> 
         <Introduction />
@@ -49,8 +59,9 @@ function App() {
 
 
 
-    </>
+    </Suspense>
   )
 }
+
 
 export default App

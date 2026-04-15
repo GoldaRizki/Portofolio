@@ -80,7 +80,7 @@ export default function Introduction(){
                 
                     <div className="container-fotoku d-flex justify-content-center">
                         <div className="animasi-foto-1"></div>
-                        <img src="/fotoku.png" alt="fotoku" className="fotoku" />
+                        <img src="/assets/introduction/fotoku.webp" alt="fotoku" className="fotoku" />
                     </div>
 
                 </div>

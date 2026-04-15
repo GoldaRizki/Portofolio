@@ -15,13 +15,15 @@ export default function Experience(){
 
         gsap.to(title.current, {
             y: 0,
-            scale: 0.8,
+
             scrollTrigger: {
                 trigger: '.title-experience',
                 start: 'top 50%', // when the top of the trigger hits the top of the viewport
                 end: "bottom top", // end after scrolling 500px beyond the start
-                scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-                onUpdate: () => ScrollTrigger.refresh(),
+                scrub: 0.1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+                onLeave: () => ScrollTrigger.refresh(),
+                onEnterBack: () => ScrollTrigger.refresh(),
+
                 //markers: true,
             }
         })

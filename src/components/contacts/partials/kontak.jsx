@@ -9,7 +9,7 @@ export default function Kontak({nama, logo, link}){
 
                         <div className='d-flex justify-content-end' style={{ width: "100%", height: "auto"}}>
 
-                                <img src={"src/assets/sosmed/" + logo + ".svg"} alt="" style={{ width: "70%", height: "auto"}} />
+                                <img src={"/assets/sosmed/" + logo + ".svg"} alt="" style={{ width: "70%", height: "auto"}} />
 
                         </div>
     

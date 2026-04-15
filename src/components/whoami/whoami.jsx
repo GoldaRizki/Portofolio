@@ -18,9 +18,9 @@ export default function WhoAmI(){
         let config_timeline = {   
                 scrollTrigger: {
                 trigger: '#profesiSaya',
-                start: '25% 60%', // when the top of the trigger hits the top of the viewport
+                start: '10% 60%', // when the top of the trigger hits the top of the viewport
                 end: "45% top", // end after scrolling 500px beyond the start
-                scrub: 0.5, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+                scrub: 0.1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
                 //onUpdate: () => ScrollTrigger.refresh(),
                 //markers: true,
                 toggleActions: "play resume resume reverse"
@@ -61,14 +61,14 @@ return(
 
             <div className="my-5 d-flex flex-wrap justify-content-center gap-1">
 
-                    <Profesi gambar="/src/assets/svg/profesi/web-programming.svg" nama="PROGRAMMER"/>
-                    <Profesi gambar="/src/assets/svg/profesi/it-support.svg" nama={"IT\u00A0SUPPORT"}/>
+                    <Profesi gambar="/assets/svg/profesi/web-programming.svg" nama="PROGRAMMER"/>
+                    <Profesi gambar="/assets/svg/profesi/it-support.svg" nama={"IT\u00A0SUPPORT"}/>
             
-                    <Profesi gambar="/src/assets/svg/profesi/embedded-system-developer.svg" nama={"EMBEDDED SYSTEM DEVELOPER"}/>
-                    <Profesi gambar="/src/assets/svg/profesi/data-analyst.svg" nama={"DATA\u00A0ANALYST"}/>
+                    <Profesi gambar="/assets/svg/profesi/embedded-system-developer.svg" nama={"EMBEDDED SYSTEM DEVELOPER"}/>
+                    <Profesi gambar="/assets/svg/profesi/data-analyst.svg" nama={"DATA\u00A0ANALYST"}/>
             
-                    <Profesi gambar="/src/assets/svg/profesi/photographer.svg" nama={"PHOTOGRAPHER"}/>
-                    <Profesi gambar="/src/assets/svg/profesi/educator.svg" nama={"EDUCATOR"}/>
+                    <Profesi gambar="/assets/svg/profesi/photographer.svg" nama={"PHOTOGRAPHER"}/>
+                    <Profesi gambar="/assets/svg/profesi/educator.svg" nama={"EDUCATOR"}/>
             
 
             </div>
