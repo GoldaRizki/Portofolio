@@ -128,7 +128,7 @@ export default function Achievement(){
                     <p style={{ fontSize: "19px" }}>
                         I was annointed to join the competition and became representative of Central Java Province. I worked together with my partner
                          &mdash;    
-                          <a href="" className="text-decoration-none d-inline-flex align-items-center gap-1">
+                          <a href="https://www.linkedin.com/in/dhiki-sujatmiko-0b69b8333/" target="_blank" className="text-decoration-none d-inline-flex align-items-center gap-1">
                              <span>Dhiki Sujatmiko</span>
                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                                 <path fillRule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
@@ -142,6 +142,14 @@ export default function Achievement(){
                         This can be useful when their base is under attack by insurgent as the soldier can hide in a cover without exposing their body.
 
                     </p>
+
+                    <a href="https://www.disbudparekraf.jatengprov.go.id/post/299/Jateng-Raih-Juara-Umum-pada-Pekan-Kreativitas-Pemuda-Indonesia-Kreativesia-2024" target="_blank" style={{ fontSize: "19px" }} className="d-inline-flex align-items-center gap-1">
+                        <span>Click here for more </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path fillRule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
+                            <path fillRule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
+                        </svg>
+                    </a>
 
                 </div>
 

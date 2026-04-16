@@ -20,7 +20,7 @@ const Experience = lazy( () => import('./components/experience/experience'))
 const LifeMotto = lazy( () => import('./components/lifeMotto/lifeMotto'))
 const Achievement = lazy( () => import('./components/achievement/achievement'))
 const Contacts = lazy( () => import('./components/contacts/contacts'))
-
+const Footer = lazy(() => import("./components/footer/footer"))
 
 function App() {
 
@@ -53,11 +53,11 @@ function App() {
         <LifeMotto />      
       </Section>
 
-      <Section id="contacts" bgColor="#F5F8FA" paddingTop="30vh" paddingBottom="20vh">
+      <Section id="contacts" bgColor="#F5F8FA" paddingTop="30vh" paddingBottom="10vh">
         <Contacts />
       </Section>
 
-
+      <Footer />
 
     </Suspense>
   )

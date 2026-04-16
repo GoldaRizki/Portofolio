@@ -14,7 +14,7 @@
 
 .isi-kontak-font{
     font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size: calc(1em + 1vw);
+    font-size: calc(0.9em + 1vw);
     color: #072227;
 }
 
@@ -45,6 +45,10 @@
         padding: 20px 10px;
         width: 95%;
 
+    }.judul-kontak{
+        font-size: calc(3em + 2vw);
+    }.isi-kontak-font{
+        font-size: calc(0.8em + 1vw);
     }
 
 
