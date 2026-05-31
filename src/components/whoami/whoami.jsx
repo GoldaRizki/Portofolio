@@ -17,13 +17,15 @@ export default function WhoAmI(){
 
         let config_timeline = {   
                 scrollTrigger: {
-                trigger: '#profesiSaya',
-                start: '10% 60%', // when the top of the trigger hits the top of the viewport
-                end: "45% top", // end after scrolling 500px beyond the start
-                scrub: 0.1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+                trigger: '#container-profesi',
+                start: 'top 50%', // when the top of the trigger hits the top of the viewport
+                end: "top 20%", // end after scrolling 500px beyond the start
+                scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
                 //onUpdate: () => ScrollTrigger.refresh(),
                 //markers: true,
-                toggleActions: "play resume resume reverse"
+                //pin: true,
+            
+                toggleActions: "play resume reverse reverse"
         
                 }
                 
@@ -34,13 +36,13 @@ export default function WhoAmI(){
         let urutan = gsap.timeline(config_timeline)
             
         urutan.to(".siapa-saya", {
-            translateY: 0
+            scale: 1
         });
         
         let container_profesi = document.querySelectorAll(".container-profesi");
         
         container_profesi.forEach(element => {
-            urutan.to(element, {opacity: 1, scale: 1.1, duration: 0.1}).to(element, {scale: 1, duration: 0.1})
+            urutan.to(element, {opacity: 1, scale: 1.1, duration: 0.6}).to(element, {scale: 1, duration: 0.6})
         });
         
               
@@ -55,7 +57,7 @@ return(
 
 <div className="min-vh-100 container-fluid p-5">
 
-    <div  className="container-xxxl">
+    <div id='container-profesi' className="container-xxxl">
 
         <h1 className="siapa-saya text-center">WHO AM&nbsp;I?</h1>
 

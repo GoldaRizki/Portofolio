@@ -42,16 +42,17 @@ export default function LifeMotto(){
 
 
         gsap.to(judul.current, {
-            y: 0,
+    
             ease: "none",
             transformOrigin: "bottom left",
             scrollTrigger: {
                 trigger: judul.current,
-                start: "top 60%",
-                end: "bottom 40%",
-                onLeave: () => ScrollTrigger.refresh(),
-                onEnterBack: () => ScrollTrigger.refresh(),
-                scrub: 0.1,
+                start: "top 50%",
+                end: "top 10%",
+                //onLeave: () => ScrollTrigger.refresh(),
+                //onEnterBack: () => ScrollTrigger.refresh(),
+                scrub: 1,
+                pin: true,
                 //markers: true
 
             }

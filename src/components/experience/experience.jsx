@@ -10,19 +10,21 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Experience(){
 
     let title = useRef();
+    let trigger_title = useRef();
 
     useGSAP(()=>{
 
         gsap.to(title.current, {
-            y: 0,
+            scale: 1,
 
             scrollTrigger: {
-                trigger: '.title-experience',
+                trigger: trigger_title.current,
                 start: 'top 50%', // when the top of the trigger hits the top of the viewport
-                end: "bottom top", // end after scrolling 500px beyond the start
+                end: "top 10%", // end after scrolling 500px beyond the start
                 scrub: 0.1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-                onLeave: () => ScrollTrigger.refresh(),
-                onEnterBack: () => ScrollTrigger.refresh(),
+                //onLeave: () => ScrollTrigger.refresh(),
+                //onEnterBack: () => ScrollTrigger.refresh(),
+                pin: title.current,
 
                 //markers: true,
             }
@@ -36,6 +38,10 @@ export default function Experience(){
         <div className="container-fluid py-5">
 
             <h1 ref={title} className="text-center title-experience mb-5">EXPERIENCE</h1>
+
+            <div ref={trigger_title} className="spacer_pengalaman">
+
+            </div>
 
             <Pengalaman
             file_gambar="goldastudio"

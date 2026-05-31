@@ -33,7 +33,7 @@ function App() {
         <Introduction />
       </Section>
 
-      <Section id="profesiSaya" bgColor="#F5F8FA" paddingTop="80vh" paddingBottom="20vh"> 
+      <Section id="profesiSaya" bgColor="#F5F8FA" paddingTop="20vh" paddingBottom="20vh"> 
         <WhoAmI />
       </Section>
 
